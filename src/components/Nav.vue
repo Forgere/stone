@@ -1,11 +1,17 @@
 <template>
   <div class='nav'>
-    <ul>
-      <router-link tag='li' to='/' exact><a>主页</a></router-link>
-      <router-link tag='li' to='/back'><a>第一类</a></router-link>
-      <router-link tag='li' to='/hello/foo'><a>第二类</a></router-link>
-      <router-link tag='li' to='/store'><a>第三类</a></router-link>
-    </ul>
+    <h2></h2>
+    <el-row class='title'>
+      <el-col :span='8'>
+        <router-link tag='div' to='/' exact><a>职业选择</a></router-link>
+      </el-col>
+      <el-col :span='8'>
+        <router-link tag='div' to='/currentAll'><a>初始卡牌</a></router-link>
+      </el-col>
+      <el-col :span='8'>
+        <router-link tag='div' to='/currentLeft'><a>剩余卡牌</a></router-link>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -17,19 +23,38 @@
 
 <style lang="scss">
 .nav {
-  ul{
-    display: flex;
-    li{
-      display: inline-block;
-      flex: 1;
+  padding-bottom: 20px;
+  text-align: center;
+  background: url('../assets/home-v2016.jpg') center no-repeat;
+  background-size: cover;
+  h2{
+    margin: 0 auto;
+    background: url('../assets/home-v2016.png') center no-repeat;
+    height: 184px;
+    width: 350px;
+  }
+  .title{
+    font-size: 18px;
+    margin-top: 10px;
+    div{
+      border-radius: 4px;
       a{
-        color: #333
+        color: #db6800;
+        font-size: 21px;
+        font-weight: 700;
+        text-shadow: 0 0 1px #ffd99b;
+        display: block;
+        width: 100%;
+        height: 100%;
       }
       &.active{
-        a{
-          color: red;
-        }
+        border: 2px solid #4f0802;
+        box-shadow: 1;
+        background-color: rgba(206, 244, 54, 0.56);
       }
+    }
+    .el-col-8 div:hover{
+      border: 2px solid #7c1c0c;
     }
   }
 }

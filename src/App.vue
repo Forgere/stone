@@ -20,5 +20,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  a{
+    text-decoration: none;
+  }
+}
+body{
+  margin: 0;
+  background: #e6d5a9;
 }
 </style>
