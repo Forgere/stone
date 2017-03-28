@@ -1,7 +1,7 @@
 <template>
   <div class='home'>
     <ul>
-      <li class="career" :class="somecareer.simple" v-for='somecareer of cardsGroup' @click='dealwith(somecareer.subgroup)'>
+      <li class="career" :class="somecareer.simple" v-for='somecareer of cardsGroup' @click='dealwith(somecareer)'>
         <div class="career-top">
           <div class="title"></div>
           <div class="career-name">{{somecareer.name}}</div>
@@ -11,6 +11,12 @@
     <div class="subgroup">
       <div class="card" v-for='card of currentCareerCards'>
         <div class="card-name">{{card.cardname}}</div>
+        <div class="card-desc">{{card.desc}}</div>
+        <div class="actions">
+          <el-button type="success">选定套牌</el-button>
+          <el-button type="warning">编辑套牌</el-button>
+          <el-button type="danger">删除套牌</el-button>
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +36,7 @@
     },
     methods: {
       dealwith (which) {
-        this.currentCareerCards = which
+        this.currentCareerCards = which.subgroup
       }
     }
   }
@@ -122,7 +128,12 @@
     flex: 1;
     border: 1px solid #b88b50;
     margin: 12px 12px 10px 0;
-    padding: 12px;
-
+    .card{
+      padding: 12px;
+      border-bottom: 1px solid #b88b10;
+      div{
+        line-height: 36px;
+      }
+    }
   }
 </style>

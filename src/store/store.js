@@ -6,18 +6,19 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     cardsData: [
-          {'name': '战士', 'simple': 'zs', 'subgroup': [{'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]},
-          {'name': '萨满', 'simple': 'sm', 'subgroup': [{'cardname': '经典萨满', 'cardsDetails': [1, 2, 3, 4]}]},
-          {'name': '潜行者', 'simple': 'qx', 'subgroup': [{'cardname': '经典潜行', 'cardsDetails': [1, 2, 3, 4]}]},
-          {'name': '圣骑士', 'simple': 'sq', 'subgroup': [{'cardname': '经典圣骑', 'cardsDetails': [1, 2, 3, 4]}]},
-          {'name': '猎人', 'simple': 'lr', 'subgroup': [{'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]},
-          {'name': '德鲁伊', 'simple': 'dly', 'subgroup': [{'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]},
-          {'name': '术士', 'simple': 'ss', 'subgroup': [{'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]},
-          {'name': '法师', 'simple': 'fs', 'subgroup': [{'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]},
-          {'name': '牧师', 'simple': 'ms', 'subgroup': [{'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]}]
+          {'name': '战士', 'simple': 'zs', 'subgroup': [{'desc': '这是一个套牌', 'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]},
+          {'name': '萨满', 'simple': 'sm', 'subgroup': [{'desc': '这是一个套牌', 'cardname': '经典萨满', 'cardsDetails': [1, 2, 3, 4]}]},
+          {'name': '潜行者', 'simple': 'qx', 'subgroup': [{'desc': '这是一个套牌', 'cardname': '经典潜行', 'cardsDetails': [1, 2, 3, 4]}]},
+          {'name': '圣骑士', 'simple': 'sq', 'subgroup': [{'desc': '这是一个套牌', 'cardname': '经典圣骑', 'cardsDetails': [1, 2, 3, 4]}]},
+          {'name': '猎人', 'simple': 'lr', 'subgroup': [{'desc': '这是一个套牌', 'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]},
+          {'name': '德鲁伊', 'simple': 'dly', 'subgroup': [{'desc': '这是一个套牌', 'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]},
+          {'name': '术士', 'simple': 'ss', 'subgroup': [{'desc': '这是一个套牌', 'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]},
+          {'name': '法师', 'simple': 'fs', 'subgroup': [{'desc': '这是一个套牌', 'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]},
+          {'name': '牧师', 'simple': 'ms', 'subgroup': [{'desc': '这是一个套牌', 'cardname': '经典战士', 'cardsDetails': [1, 2, 3, 4]}]}],
+    currentCards: [5, 4, 3, 2, 1]
   },
   mutations: {
-    increment: state => state.count++,
-    decrement: state => state.count--
+    addcard: state => state.count++,
+    decard: state => state.count--
   }
 })
