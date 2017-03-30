@@ -18,7 +18,8 @@ export default new Vuex.Store({
     currentCards: [5, 4, 3, 2, 1]
   },
   mutations: {
-    addcard: state => state.count++,
-    decard: state => state.count--
+    addCard: state => state.currentCards.push(null),
+    deleteCard: (state, payload) => state.currentCards.splice(payload.index, 1),
+    saveCard: (state, payload) => { state.currentCards[payload.index] = payload.value }
   }
 })

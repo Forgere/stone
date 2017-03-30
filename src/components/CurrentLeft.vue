@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="right">
-        <div class="card" v-for='card of usedCards'>
+        <div class="card" v-for='(card,index) of usedCards'>
           {{card}}
           <el-button type="primary" size="mini" @click='reback(index, card)'>ok</el-button>
         </div>
@@ -55,19 +55,21 @@
   }
 </script>
 <style lang='scss'>
-  .list-content{
-    display: flex;
-    .left,.right{
-      flex: 1;
+  .leftlist{
+    .list-content{
+      display: flex;
+      .left,.right{
+        flex: 1;
+      }
+      .left{
+        border-right: 1px solid #b88b50;
+      }
     }
-    .left{
-      border-right: 1px solid #b88b50;
+    .actions{
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
     }
-  }
-  .actions{
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 </style>
